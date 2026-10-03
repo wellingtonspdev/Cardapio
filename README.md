@@ -3,6 +3,7 @@
 [![Expo SDK](https://img.shields.io/badge/Expo-SDK%2054-000020.svg?style=flat-square&logo=expo)](https://expo.dev/)
 [![React Native](https://img.shields.io/badge/React%20Native-0.81.5-61DAFB.svg?style=flat-square&logo=react)](https://reactnative.dev/)
 [![React Navigation](https://img.shields.io/badge/React%20Navigation-v7-6b52ae.svg?style=flat-square)](https://reactnavigation.org/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-LIVE-000000.svg?style=flat-square&logo=vercel)](https://streetbite.wellingtonsp.uk)
 [![Status](https://img.shields.io/badge/Snack%20Status-READY%20FOR%20HUMAN%20VALIDATION-F77F00.svg?style=flat-square)](#expo-snack)
 [![Disciplina](https://img.shields.io/badge/PDM%20II-Atividade%20Prática%207-E63946.svg?style=flat-square)](#sobre)
 
@@ -116,6 +117,13 @@ npx expo start --clear
 ```
 
 4. Pressione `a` para abrir no emulador Android, `i` para simulador iOS, ou escaneie o QR Code com o aplicativo Expo Go no seu smartphone.
+
+## Deploy Web (Vercel)
+
+* **URL de Produção:** [https://streetbite.wellingtonsp.uk](https://streetbite.wellingtonsp.uk)
+* **Build Command:** `expo export -p web`
+* **Output Directory:** `dist`
+* **Plataforma:** React Native Web via Metro Bundler
 
 ---
 
