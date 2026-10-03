@@ -23,15 +23,15 @@ export const Estilo = StyleSheet.create({
     backgroundColor: Cores.background,
   },
   scrollContainer: {
-    paddingHorizontal: 18,
+    paddingHorizontal: 16,
     paddingTop: 12,
-    paddingBottom: 40,
+    paddingBottom: 48,
   },
 
   // Cabeçalho da Marca
   brandHeader: {
-    paddingTop: 8,
-    paddingBottom: 16,
+    paddingTop: 6,
+    paddingBottom: 14,
     borderBottomWidth: 1,
     borderBottomColor: Cores.border,
     marginBottom: 16,
@@ -66,11 +66,6 @@ export const Estilo = StyleSheet.create({
   categoryHeader: {
     marginBottom: 16,
     marginTop: 4,
-  },
-  categoryBadgeRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 4,
   },
   categoryTitle: {
     fontSize: 22,
@@ -125,7 +120,9 @@ export const Estilo = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 6,
+    flexWrap: 'wrap',
+    gap: 8,
+    marginBottom: 8,
   },
   cardTitle: {
     fontSize: 18,
@@ -133,8 +130,7 @@ export const Estilo = StyleSheet.create({
     color: Cores.cream,
     letterSpacing: 0.8,
     textTransform: 'uppercase',
-    flex: 1,
-    marginRight: 8,
+    flexShrink: 1,
   },
   cardDescription: {
     fontSize: 14,

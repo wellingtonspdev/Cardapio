@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
@@ -26,15 +27,16 @@ export default function App() {
               backgroundColor: Cores.surface,
               borderTopColor: Cores.border,
               borderTopWidth: 1,
-              height: 62,
-              paddingBottom: 8,
-              paddingTop: 6,
+              paddingTop: 8,
+              paddingBottom: Platform.OS === 'ios' ? 24 : 10,
+              height: Platform.OS === 'ios' ? 88 : 68,
             },
             tabBarLabelStyle: {
               fontSize: 11,
               fontWeight: '700',
               letterSpacing: 0.5,
               textTransform: 'uppercase',
+              marginTop: 2,
             },
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
@@ -51,9 +53,27 @@ export default function App() {
             },
           })}
         >
-          <Tab.Screen name="Pizzas" component={Tela1} />
-          <Tab.Screen name="Hamburgueres" component={Tela2} />
-          <Tab.Screen name="Bebidas" component={Tela3} />
+          <Tab.Screen
+            name="Pizzas"
+            component={Tela1}
+            options={{
+              tabBarAccessibilityLabel: 'Aba de Pizzas',
+            }}
+          />
+          <Tab.Screen
+            name="Hamburgueres"
+            component={Tela2}
+            options={{
+              tabBarAccessibilityLabel: 'Aba de Hambúrgueres',
+            }}
+          />
+          <Tab.Screen
+            name="Bebidas"
+            component={Tela3}
+            options={{
+              tabBarAccessibilityLabel: 'Aba de Bebidas',
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
