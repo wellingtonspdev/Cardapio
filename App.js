@@ -8,6 +8,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Tela1 from './src/tela1';
 import Tela2 from './src/tela2';
 import Tela3 from './src/tela3';
+import { Cores } from './src/Estilo';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,19 +20,21 @@ export default function App() {
         <Tab.Navigator
           screenOptions={({ route }) => ({
             headerShown: false,
-            tabBarActiveTintColor: '#F77F00',
-            tabBarInactiveTintColor: '#9A9289',
+            tabBarActiveTintColor: Cores.orange,
+            tabBarInactiveTintColor: Cores.muted,
             tabBarStyle: {
-              backgroundColor: '#1A1816',
-              borderTopColor: 'rgba(255, 255, 255, 0.08)',
+              backgroundColor: Cores.surface,
+              borderTopColor: Cores.border,
               borderTopWidth: 1,
-              height: 60,
+              height: 62,
               paddingBottom: 8,
               paddingTop: 6,
             },
             tabBarLabelStyle: {
-              fontSize: 12,
-              fontWeight: '600',
+              fontSize: 11,
+              fontWeight: '700',
+              letterSpacing: 0.5,
+              textTransform: 'uppercase',
             },
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
