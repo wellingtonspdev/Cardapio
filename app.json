@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Street Bite",
+    "slug": "street-bite-cardapio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#11100F"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#11100F"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
