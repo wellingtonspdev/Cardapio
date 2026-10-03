@@ -1,33 +1,58 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
+import { Ionicons } from '@expo/vector-icons';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import Tela1 from './src/tela1';
+import Tela2 from './src/tela2';
+import Tela3 from './src/tela3';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Street Bite</Text>
-      <Text style={styles.subtitle}>FAST FOOD • BIG FLAVOR</Text>
+    <SafeAreaProvider>
       <StatusBar style="light" />
-    </View>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={({ route }) => ({
+            headerShown: false,
+            tabBarActiveTintColor: '#F77F00',
+            tabBarInactiveTintColor: '#9A9289',
+            tabBarStyle: {
+              backgroundColor: '#1A1816',
+              borderTopColor: 'rgba(255, 255, 255, 0.08)',
+              borderTopWidth: 1,
+              height: 60,
+              paddingBottom: 8,
+              paddingTop: 6,
+            },
+            tabBarLabelStyle: {
+              fontSize: 12,
+              fontWeight: '600',
+            },
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+
+              if (route.name === 'Pizzas') {
+                iconName = focused ? 'pizza' : 'pizza-outline';
+              } else if (route.name === 'Hamburgueres') {
+                iconName = focused ? 'fast-food' : 'fast-food-outline';
+              } else if (route.name === 'Bebidas') {
+                iconName = focused ? 'cafe' : 'cafe-outline';
+              }
+
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+          })}
+        >
+          <Tab.Screen name="Pizzas" component={Tela1} />
+          <Tab.Screen name="Hamburgueres" component={Tela2} />
+          <Tab.Screen name="Bebidas" component={Tela3} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#11100F',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    color: '#FFF4E6',
-    fontSize: 28,
-    fontWeight: 'bold',
-  },
-  subtitle: {
-    color: '#F77F00',
-    fontSize: 14,
-    marginTop: 8,
-    letterSpacing: 2,
-  },
-});
