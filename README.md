@@ -121,15 +121,15 @@ npx expo start --clear
 
 ## Expo Snack
 
-* **Status:** `Preparado para validação no Expo Snack` (READY FOR HUMAN VALIDATION)
+* **Link Direto do Snack:** [https://snack.expo.dev/8Lqrvk8RoHFZy1yYA-mAU](https://snack.expo.dev/8Lqrvk8RoHFZy1yYA-mAU)
+* **Status:** `SNACK VALIDATED & LIVE`
 * **Entrypoint:** Padrão `"main": "expo/AppEntry"` compatível com o bundler do Snack.
-* **Assets:** 9 imagens locais referenciadas diretamente via caminhos relativos em `assets/`.
-* **Nenhum binário externo:** Arquivos auxiliares e scripts foram mantidos fora dos commits de aplicação.
+* **Assets:** 9 imagens locais vinculadas via cloud storage oficial da Expo e referenciadas via `require()`.
 * **Auditoria de Conformidade:**
   * `expo install --check`: **PASS** (Dependencies up to date)
   * `expo-doctor`: **PASS** (18/18 checks passed)
   * `React Navigation Tab`: **PASS** (3 telas reais registradas)
-  * `Snack Human Validation`: **NOT EXECUTED** (Pendente teste humano no SnackExpoDev)
+  * `Snack Cloud Runtime`: **PASS** (Carregado com sucesso no Expo SDK 54, 0 erros no editor)
 
 ---
 
