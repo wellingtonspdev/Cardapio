@@ -129,7 +129,7 @@ npx expo start --clear
 
 ## Expo Snack
 
-* **Link Direto do Snack:** [https://snack.expo.dev/8Lqrvk8RoHFZy1yYA-mAU](https://snack.expo.dev/8Lqrvk8RoHFZy1yYA-mAU)
+* **Link Direto do Snack:** [https://snack.expo.dev/yvwSKIIgkT14y8BPMp47g](https://snack.expo.dev/yvwSKIIgkT14y8BPMp47g)
 * **Status:** `SNACK VALIDATED & LIVE`
 * **Entrypoint:** Padrão `"main": "expo/AppEntry"` compatível com o bundler do Snack.
 * **Assets:** 9 imagens locais vinculadas via cloud storage oficial da Expo e referenciadas via `require()`.
