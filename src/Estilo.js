@@ -104,7 +104,7 @@ export const Estilo = StyleSheet.create({
   },
   cardImageContainer: {
     width: '100%',
-    height: 185,
+    height: 215,
     backgroundColor: Cores.surfaceSoft,
     position: 'relative',
     overflow: 'hidden',
